@@ -363,6 +363,7 @@ mod internal {
 
     #[allow(non_upper_case_globals)]
     fn raw_fcc_to_frameformat(raw: OSType) -> Option<FrameFormat> {
+        return Some(FrameFormat::YUYV);
         println!("Format: {}", raw);
         match raw {
             kCMVideoCodecType_422YpCbCr8 | kCMPixelFormat_422YpCbCr8_yuvs => {
